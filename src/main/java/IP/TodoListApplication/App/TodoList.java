@@ -140,11 +140,23 @@ public class TodoList {
                 if (!path.equals("0"))
                     action.executeAction(path);
                 break;
+            
+            case Actions.SORT_TASKS_BY_ALPHABET:
+                System.out.println("\nSorting tasks alphabetically...");
+    
+                List<Task> taskList = new ArrayList<>(tasks.values());
+    
+                taskList.sort((t1, t2) -> t1.getDescription().compareToIgnoreCase(t2.getDescription()));
+    
+                System.out.println("-----------------------");
+                for (Task t : taskList) {
+                    System.out.println(t);
+                }
+                break;
 
             case Actions.EXIT:
                 applicationRunning = false;
                 break;
-
 
         }
     }
@@ -175,7 +187,8 @@ public class TodoList {
         System.out.println("7. sort tasks by project");
         System.out.println("8. save tasks to file");
         System.out.println("9. read from file");
-        System.out.println("10. Exit");
+        System.out.println("11. Sort tasks alphabetically");
+        System.out.println("12. Exit");
         System.out.println("");
     }
 
@@ -187,7 +200,7 @@ public class TodoList {
      * @return userInput to the start() method, for it to be used
      */
     public int readAction() {
-        List<Integer> availableActions = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+        List<Integer> availableActions = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12);
         while (true) {
             try {
                 System.out.print("Enter action: ");

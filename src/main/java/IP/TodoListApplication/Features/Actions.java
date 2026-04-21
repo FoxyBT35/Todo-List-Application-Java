@@ -22,8 +22,8 @@ public abstract class Actions {
     public static final int SORT_TASKS_PROJECT = 7;
     public static final int SAVE_TASKS_TO_FILE = 8;
     public static final int READ_FROM_FILE = 9;
-    public static final int EXIT = 10;
-
+    public static final int SORT_TASKS_BY_ALPHABET = 11;
+    public static final int EXIT = 12;
     /**
      * This method refers to the list of tasks
      * and how it should be used to be printed to the
