@@ -126,4 +126,13 @@ public class TaskTest {
         assertEquals(expected, task.getProjectName());
     }
 
+    @Test
+    public void setFavorite() {
+        Task task = new Task();
+
+        task.setFavorite(true);
+
+        assertTrue(task.isFavorite());
+}
+
 }
