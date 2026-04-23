@@ -34,3 +34,11 @@ application {
     // Define the main class for the application.
     mainClassName = 'IP.TodoListApplication.Main'
 }
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': 'IP.TodoListApplication.Main'
+        )
+    }
+}

@@ -146,7 +146,7 @@ public class TodoList {
     
                 List<Task> taskList = new ArrayList<>(tasks.values());
     
-                taskList.sort((t1, t2) -> t1.getDescription().compareToIgnoreCase(t2.getDescription()));
+                taskList.sort((t1, t2) -> t1.getTitle().compareToIgnoreCase(t2.getTitle()));
     
                 System.out.println("-----------------------");
                 for (Task t : taskList) {
@@ -154,7 +154,7 @@ public class TodoList {
                 }
                 break;
 
-            case Actions.MARK_AS_FAVOURITE:
+            case Actions.MARK_AS_FAVORITE:
                 if (tasks.size() > 0) {
                   action = new MarkAsFavorite();
                   action.showActionsInformation();

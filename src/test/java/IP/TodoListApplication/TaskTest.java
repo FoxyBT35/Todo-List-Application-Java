@@ -1,3 +1,4 @@
+package IP.TodoListApplication;
 import IP.TodoListApplication.App.Task;
 import org.junit.Test;
 
